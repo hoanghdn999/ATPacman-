@@ -297,6 +297,9 @@ public class Ghost
     }
 }
 
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Urls.Add($"http://0.0.0.0:{port}");
+
 public class Program
 {
     public static void Main()
